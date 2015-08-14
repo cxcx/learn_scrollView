@@ -25,10 +25,27 @@
     UIView* leftView    = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
     UIView* midView     = [[UIView alloc] initWithFrame:CGRectMake(SCREENWIDTH, 0, SCREENWIDTH, SCREENHEIGHT)];
     UIView* rightView   = [[UIView alloc] initWithFrame:CGRectMake(SCREENWIDTH * 2, 0, SCREENWIDTH, SCREENHEIGHT)];
-
+    
+    
+    
+    //contentsize属性用来控制展示的全部内容的大小
     scrollView.contentSize      = CGSizeMake(SCREENWIDTH * 3, SCREENHEIGHT);
+    
+    //是否允许滑动
     scrollView.scrollEnabled    = YES;
+    
+    //设置初始位置偏移量
     [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    
+    //no表示滑到边界时不允许边界弹缩，默认为yes
+    scrollView.bounces = YES;
+    
+    //If the value of this property is YES, the scroll view stops on multiples of the scroll view’s bounds when the user scrolls. The default value is NO.
+    //pagingEnable = YES;表示滑动时 会在下一个scrollview大小的页面停止 不会向前继续滑动；
+    scrollView.pagingEnabled = YES;
+    
+    
+    
     [self.view addSubview:scrollView];
     [scrollView addSubview:leftView];
     [scrollView addSubview:midView];
