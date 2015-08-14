@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7EB8FE48-3F67-4F72-9C92-DF3B0CF480C6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</key>
+		<string>http://115.238.55.154:8001/svn/trunk/renhe_iphone_speed</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Page_ScrollView/Page_ScrollView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</key>
+		<string>http://115.238.55.154:8001/svn/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://115.238.55.154:8001/svn/trunk/renhe_iphone_speed/Page_ScrollView/Page_ScrollView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</string>
+			<key>IDESourceControlWCCName</key>
+			<string>work</string>
+		</dict>
+	</array>
+</dict>
+</plist>
