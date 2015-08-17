@@ -9,9 +9,13 @@
 #import "ViewController.h"
 #define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
 #define SCREENWIDTH  [[UIScreen mainScreen] bounds].size.width
-int i = 0;
+
 @interface ViewController () <UIScrollViewDelegate>
+{
+    int i;
+}
 @property (nonatomic, strong) UIScrollView* scrollView;
+@property (nonatomic, strong) UIPageControl* pageControll;
 @end
 
 @implementation ViewController
@@ -19,8 +23,12 @@ int i = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     int pageNum = 3;
+    [self setValue:@(1) forKey:@"i"];
+    NSLog(@"%d", i);
     NSLog(@"SCREENHEIGHT = %f\n SCREENWIDTH = %f", SCREENHEIGHT, SCREENWIDTH);
     _scrollView    = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+    _pageControll  = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
+    
     
     
     UIView* leftView    = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
@@ -34,6 +42,23 @@ int i = 0;
     leftView.backgroundColor    = [UIColor redColor];
     midView.backgroundColor     = [UIColor blueColor];
     rightView.backgroundColor   = [UIColor blackColor];
+    
+    //pageCtroll setting
+    [self.view addSubview:_pageControll];
+    _pageControll.numberOfPages = pageNum;
+    NSDictionary*  view = [NSDictionary dictionaryWithObjectsAndKeys:_pageControll, @"pageControll", nil];
+    NSArray* constraints_v = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[pageControll]-20-|" options:0 metrics:nil views:view];
+    NSArray* constraints_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[pageControll]-|" options:0 metrics:nil views:view];
+    _pageControll.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:constraints_H];
+    [self.view addConstraints:constraints_v];
+    
+    
+    
+    //添加kvo观察 i 的变化
+    [self addObserver:self forKeyPath:@"i" options:0 context:NULL];
+    
+    
     
     
     //contentsize属性用来控制展示的全部内容的大小
@@ -67,12 +92,14 @@ int i = 0;
 //滑动时调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"在滑动");
+   // NSLog(@"在滑动");
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     NSLog(@"结束减速");
+    ;
+    NSLog(@"%d" , i);
 }
 
 
@@ -82,18 +109,28 @@ int i = 0;
     switch (i % 3) {
         case 0:
             [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            _pageControll.currentPage = i % 3;
             break;
         case 1:
             [_scrollView setContentOffset:CGPointMake(1 * SCREENWIDTH, 0) animated:YES];
+            _pageControll.currentPage = i % 3;
             break;
         case 2:
             [_scrollView setContentOffset:CGPointMake(2 * SCREENWIDTH, 0) animated:YES];
+            _pageControll.currentPage = i % 3;
             break;
             
         default:
             break;
     }
-    i++;
+    int tem = i + 1;
+    [self setValue:@(tem) forKey:@"i"];
+}
+
+#pragma mark  -- kvo观察i变化
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    NSLog(@"i 变化了");
 }
 
 

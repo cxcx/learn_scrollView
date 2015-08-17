@@ -7,39 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7EB8FE48-3F67-4F72-9C92-DF3B0CF480C6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Page_ScrollView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</key>
-		<string>http://115.238.55.154:8001/svn/trunk/renhe_iphone_speed</string>
+		<key>DB519EBE09141888A297EA1D1B5F05804911B671</key>
+		<string>github.com:cxcx/learn_scrollView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Page_ScrollView/Page_ScrollView.xcodeproj/project.xcworkspace</string>
+	<string>Page_ScrollView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</key>
-		<string>../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</key>
-		<string>http://115.238.55.154:8001/svn/trunk</string>
+		<key>DB519EBE09141888A297EA1D1B5F05804911B671</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://115.238.55.154:8001/svn/trunk/renhe_iphone_speed/Page_ScrollView/Page_ScrollView.xcodeproj/project.xcworkspace</string>
+	<string>github.com:cxcx/learn_scrollView.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</string>
+	<string>DB519EBE09141888A297EA1D1B5F05804911B671</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>124d89b9-bc11-4136-92ea-2a4cc9d5d8d0++8310</string>
+			<string>DB519EBE09141888A297EA1D1B5F05804911B671</string>
 			<key>IDESourceControlWCCName</key>
-			<string>work</string>
+			<string>learn_scrollView</string>
 		</dict>
 	</array>
 </dict>
